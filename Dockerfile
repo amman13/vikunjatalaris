@@ -9,6 +9,9 @@ ENV CYPRESS_INSTALL_BINARY=0
 
 COPY frontend/ ./
 
+ARG VITE_OPENAI_API_KEY
+ENV VITE_OPENAI_API_KEY=$VITE_OPENAI_API_KEY
+
 RUN npm install -g corepack && corepack enable && \
       pnpm install && \
       pnpm run build
