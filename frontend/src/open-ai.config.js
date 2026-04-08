@@ -1,1 +1,1 @@
-export const OPENAI_API_KEY = 'YOUR API KEY'
+export const OPENAI_API_KEY = import.meta.env.VITE_OPENAI_API_KEY
